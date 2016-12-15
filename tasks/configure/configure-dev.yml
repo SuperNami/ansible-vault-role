@@ -1,0 +1,12 @@
+---
+- name: create /etc/vault directory
+  file: path=/etc/vault
+        state=directory
+
+
+- name: copy development vault.hcl
+  template: src=vault-dev.hcl
+            dest=/etc/vault/vault.hcl
+            owner=root
+            group=root
+            mode=0644

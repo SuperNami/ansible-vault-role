@@ -1,0 +1,15 @@
+---
+- name: install unzip
+  apt: name=unzip
+       update_cache=yes
+       state=present
+
+
+- name: install vault
+  unarchive: src=/opt/vault_{{ vault_version }}_linux_amd64.zip
+             dest=/usr/local/bin
+
+
+- name: remove vault archive
+  file: path=/opt/vault_{{ vault_version }}_linux_amd64.zip
+        state=absent

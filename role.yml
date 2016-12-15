@@ -1,0 +1,9 @@
+---
+- name: vault
+  hosts: all
+  user: root
+  become: true
+  roles:
+  - vault
+  vars_files:
+  - vars/vault.yml

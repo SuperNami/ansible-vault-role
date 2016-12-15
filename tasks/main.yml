@@ -1,0 +1,12 @@
+---
+- include: install/download.yml
+  tags: download
+
+- include: install/install.yml
+  tags: install
+
+- include: configure/configure-dev.yml
+  tags: configure_dev
+
+- include: configure/configure-prod.yml
+  tags: configure_prod
